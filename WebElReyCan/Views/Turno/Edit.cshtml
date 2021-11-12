@@ -1,0 +1,46 @@
+﻿@model WebElReyCan.Models.Turno
+@{
+    ViewBag.Title = "Editar detalles turno";
+}
+
+@using (Html.BeginForm("Edit", "Turno", FormMethod.Post))
+{
+    @Html.HiddenFor(model => model.Id)
+    <div>
+        @Html.LabelFor(model => model.Fecha)
+        @Html.EditorFor(model => model.Fecha)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Hora)
+        @Html.EditorFor(model => model.Hora)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.NombreMascota)
+        @Html.EditorFor(model => model.NombreMascota)
+        @Html.ValidationMessageFor(model => model.NombreMascota)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Raza)
+        @Html.EditorFor(model => model.Raza)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Edad)
+        @Html.EditorFor(model => model.Edad)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.NombreDuenio)
+        @Html.EditorFor(model => model.NombreDuenio)
+        @Html.ValidationMessageFor(model => model.NombreDuenio)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Celular)
+        @Html.EditorFor(model => model.Celular)
+        @Html.ValidationMessageFor(model => model.Celular)
+    </div>
+    <p>
+        <input class="button" type="submit" value="Modificar turno" />
+    </p>
+}
+<button>
+    @Html.ActionLink("Volver al inicio", "Index", "Turno")
+</button>

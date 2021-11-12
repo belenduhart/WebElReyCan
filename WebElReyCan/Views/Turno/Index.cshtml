@@ -1,0 +1,71 @@
+﻿@model IEnumerable<WebElReyCan.Models.Turno>
+
+@{
+    ViewBag.Title = "Inicio";
+}
+
+<button>
+    @Html.ActionLink("Nuevo turno", "Create", "Turno")
+</button>
+<button>
+    @Html.ActionLink("Ver turnos de hoy", "SearchByDate", "Turno")
+</button>
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hora)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreMascota)
+        </th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hora)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreMascota)
+            </td>
+            <td id="botonera">
+                <button class="botonera">
+                    @Html.ActionLink("Details", "Detail", new { id = item.Id })
+                </button>
+                <button class="botonera">
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </button>
+                <button class="botonera">
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+                </button>
+            </td>
+        </tr>
+    }
+</table>
+
+
+@using (Html.BeginForm("SearchByName", "Turno", FormMethod.Get))
+{
+    <div>
+        @Html.TextBox("NombreMascota", null)
+        <input class="button" type="submit" value="Buscar por Nombre" />
+    </div>
+}
+
+@using (Html.BeginForm("SearchByPhone", "Turno", FormMethod.Get))
+{
+    <div>
+        @Html.TextBox("Celular", null)
+        <input class="button" type="submit" value="Buscar por Celular" />
+    </div>
+}

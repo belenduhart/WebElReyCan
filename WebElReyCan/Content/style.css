@@ -1,0 +1,88 @@
+﻿body {
+}
+*{
+    margin:0;
+}
+header{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+}
+    header div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 10vw;
+    }
+#Banner {
+    width: 90vw;
+    height: 250px;
+    background-image: url("https://st2.depositphotos.com/1007995/10899/i/600/depositphotos_108992944-stock-photo-what-costume-do-you-preffer.jpg");
+    background-size: cover;
+    text-align: center;
+    color: black;
+    font-size: 3em;
+    font-weight: bold;
+}
+#Logo img{
+    width:100px;
+}
+#LogIn {
+    text-align: center;
+    font-weight: bold;
+    background-color: darkslateblue;
+    height: 100px;
+}
+#LogIn p{
+    margin: 20%auto;
+}
+
+nav{
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content:flex-end;
+    background-color:darkslateblue;
+}
+#Main{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    min-height:400px
+}
+aside {
+    background-color: darkslateblue;
+    color:white;
+    text-align:center;
+}
+#Content{
+    text-align:center;
+    width:95vw;
+}
+ul{
+    color:white;
+    text-align:left;
+}
+
+
+a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+}
+
+footer{
+    height:50px;
+    color: white;
+    font-weight:bold;
+    text-align:center;
+    background-color: darkslateblue;
+}
+
+button , input {
+    padding: 1vh 1vw;
+    background-color: darkslateblue;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px 5px #000000;
+    margin:10px 10px;
+}

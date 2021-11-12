@@ -1,0 +1,61 @@
+﻿@model WebElReyCan.Models.Turno
+@{
+    ViewBag.Title = "Detalles del turno";
+}
+
+<fieldset>
+    <legend>
+        Flight Details
+    </legend>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Fecha)
+    </div>
+    <div class="display-text">
+        @Html.DisplayFor(model => model.Fecha)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Hora)
+    </div>
+    <div class="display-text">
+        @Html.DisplayFor(model => model.Hora)
+    </div>
+
+    <div >
+        @Html.DisplayNameFor(model => model.NombreMascota)
+    </div>
+    <div >
+        @Html.DisplayFor(model => model.NombreMascota)
+    </div>
+
+    <div >
+        @Html.DisplayNameFor(model => model.Raza)
+    </div>
+    <div >
+        @Html.DisplayFor(model => model.Raza)
+    </div>
+
+    <div>
+        @Html.DisplayNameFor(model => model.Edad)
+    </div>
+    <div >
+        @Html.DisplayFor(model => model.Edad)
+    </div>
+
+    <div >
+        @Html.DisplayNameFor(model => model.NombreDuenio)
+    </div>
+    <div >
+        @Html.DisplayFor(model => model.NombreDuenio)
+    </div>
+
+    <div >
+        @Html.DisplayNameFor(model => model.Celular)
+    </div>
+    <div >
+        @Html.DisplayFor(model => model.Celular)
+    </div>
+</fieldset>
+<button>
+    @Html.ActionLink("Volver al inicio", "Index", "Turno")
+</button>

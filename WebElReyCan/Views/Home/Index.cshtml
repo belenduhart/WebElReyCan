@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+}
+<h2 class="viewbag"> @ViewBag.Saludo</h2>
+<h2 class="viewbag"> @ViewBag.Fecha</h2>
+<button id="botonIngresar">
+    @Html.ActionLink("Ingresar", "Index", "Turno")
+</button>
+
+@section SideBar{
+    <h2>¿Cuidas bien el pelo de tu amigo perruno?</h2>
+    <p> Algunos consejos:</p>
+    <ul>
+        <li>
+            Cepillar de manera regular con el cepillo idóneo
+        </li>
+        <li>
+            Bañar con el shampoo acorde a su pelo
+        </li>
+        <li>
+            Brindarle una buena alimentación
+        </li>
+        <li>
+            Mantener su higiene
+        </li>
+        <li>
+            ¡Darle mucho amor!
+        </li>
+    </ul>
+}

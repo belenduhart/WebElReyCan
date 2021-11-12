@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/style.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <section id="Banner">
+            "BIENVENIDOS A LA PELUQUERIA DEL REY CAN"
+        </section>
+        <div>
+        <section id="Logo">
+            <img src="https://st2.depositphotos.com/4441075/10938/v/600/depositphotos_109389088-stock-illustration-sign-with-domestic-pets-silhouettes.jpg" />
+        </section>
+        <section id="LogIn">
+            <p>LogIn</p>
+        </section>
+        </div>
+    </header>
+    <nav>
+        <button>
+            @Html.ActionLink("Inicio", "Index", "Home")
+        </button>
+        <button>
+            @Html.ActionLink("Turnos", "Index", "Turno")
+        </button>
+    </nav>
+    <main id="Main">
+        <aside id="LeftSideBar">
+            @if (IsSectionDefined("SideBar"))
+            {
+                @RenderSection("SideBar")
+            }
+            else
+            {
+                <h2> ¿Qué significa ser peluquero canino?</h2>
+                <p> Te contamos un poco en este link:</p>
+                <a href="https://es.wikipedia.org/wiki/Peluquero_canino"> Nuestra profesión</a>
+            }
+            </aside>
+    <div id="Content">
+        @RenderBody()
+    </div>
+    </main>
+    <footer>
+        E-mail: elreycan@email.com
+    </footer>
+</body>
+</html>
